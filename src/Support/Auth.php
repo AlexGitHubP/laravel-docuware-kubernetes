@@ -7,6 +7,8 @@ use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class Auth
 {
@@ -22,15 +24,8 @@ class Auth
             ->reject(fn (array $cookie) => Arr::get($cookie, 'Value') === '')
             ->firstWhere('Name', self::COOKIE_NAME);
 
-        Cache::driver(self::cacheDriver())
-            ->put(
-                self::CACHE_KEY,
-                [
-                    Arr::get($cookie, 'Name') => Arr::get($cookie, 'Value'),
-                    'CreatedAt' => now()->toDateTimeString(),
-                ],
-                now()->addMinutes(config('docuware.cookie_lifetime')),
-            );
+        $now = Carbon::now()->format('Y-m-d H:i:s');
+        DB::insert('insert into documents_kubernetes (cookie_name, cookie_value, created_at, updated_at) values (?, ?, ?, ?)', [$cookie['Name'], $cookie['Value'], $now, $now]);
     }
 
     public static function cookies(): ?array
@@ -72,7 +67,7 @@ class Auth
 
     public static function check(): bool
     {
-        return Cache::driver(self::cacheDriver())->has(self::CACHE_KEY);
+        return DB::table('documents_kubernetes')->exists();
     }
 
     protected static function cacheDriver(): string
