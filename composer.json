@@ -9,6 +9,7 @@
     "codebar Solutions AG",
     "Ricoh Schweiz AG"
   ],
+  "minimum-stability": "dev",
   "homepage": "https://github.com/AlexGitHubP/laravel-docuware-kubernetes",
   "license": "MIT",
   "authors": [
