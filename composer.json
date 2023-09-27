@@ -1,6 +1,6 @@
 {
-  "name": "codebar-ag/laravel-docuware",
-  "description": "DocuWare integration with Laravel",
+  "name": "laravel-docuware-kubernetes",
+  "description": "DocuWare integration with Laravel and kubernetes support",
   "keywords": [
     "laravel",
     "docuware",
@@ -9,19 +9,15 @@
     "codebar Solutions AG",
     "Ricoh Schweiz AG"
   ],
-  "homepage": "https://github.com/codebar-ag/laravel-docuware",
+  "homepage": "https://github.com/laravel-docuware-kubernetes",
   "license": "MIT",
   "authors": [
     {
-      "name": "Sebastian Fix",
-      "email": "sebastian.fix@codebar.ch",
-      "homepage": "https://www.codebar.ch",
+      "name": "Alex Popa",
+      "email": "alex@jobful.ro",
+      "homepage": "https://jobful.io/",
       "role": "Sofware-Engineer"
     },
-    {
-      "name": "Rhys Lees",
-      "role": "Software-Developer"
-    }
   ],
   "require": {
     "php": "^8.2",
