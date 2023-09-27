@@ -12,10 +12,12 @@
   "homepage": "https://github.com/AlexGitHubP/laravel-docuware-kubernetes",
   "license": "MIT",
   "authors": [
+    {
       "name": "Alex Popa",
       "email": "alex@jobful.ro",
       "homepage": "https://jobful.io",
       "role": "Sofware-Engineer"
+    }
   ],
   "require": {
     "php": "^8.2",
