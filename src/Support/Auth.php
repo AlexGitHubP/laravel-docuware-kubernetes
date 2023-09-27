@@ -30,7 +30,7 @@ class Auth
 
     public static function cookies(): ?array
     {
-        return Cache::driver(self::cacheDriver())->get(self::CACHE_KEY);
+        return DB::table('documents_kubernetes')->get()->pluck('cookie_value', 'cookie_name')->toArray();
     }
 
     public static function cookieJar(): ?CookieJar
