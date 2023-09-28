@@ -1,5 +1,5 @@
 {
-    "name": "alexgithubp/laravel-docuware",
+    "name": "alexgithubp/laravel-docuware-kubernetes",
     "description": "DocuWare integration with Laravel, with support for kubernetes pods.",
     "keywords": [
         "laravel",
