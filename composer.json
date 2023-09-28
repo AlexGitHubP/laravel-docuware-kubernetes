@@ -5,7 +5,7 @@
         "laravel",
         "docuware",
         "codebar-ag",
-        "laravel-docuware"
+        "laravel-docuware",
         "docuware-kubernetes"
     ],
     "homepage": "https://github.com/AlexGitHubP/laravel-docuware-kubernetes",
