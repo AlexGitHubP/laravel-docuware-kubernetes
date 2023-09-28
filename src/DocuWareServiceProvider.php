@@ -11,7 +11,7 @@ class DocuWareServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-docuware')
+            ->name('laravel-docuware-kubernetes')
             ->hasConfigFile()
             ->hasCommand(ListAuthCookie::class);
     }
