@@ -6,6 +6,7 @@
         "docuware",
         "codebar-ag",
         "laravel-docuware"
+        "docuware-kubernetes"
     ],
     "homepage": "https://github.com/AlexGitHubP/laravel-docuware-kubernetes",
     "license": "MIT",
